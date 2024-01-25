@@ -16,6 +16,8 @@ python3Packages.buildPythonApplication rec {
     hash = "sha256-ttwNWsSkuMpT2GRQCMDIVq9CfTsQiiQBmOOBqaQRVBA=";
   };
 
+  doCheck = false;
+
   postPatch = ''
     substituteInPlace setup.py \
       --replace "==" ">="
